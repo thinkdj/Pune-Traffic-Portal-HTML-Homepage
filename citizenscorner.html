@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Pune Traffic Portal </title>
+	
+	  <link rel="stylesheet" href="style.css" />	
+	  	
+		<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="scripts/linkFader.jquery.js"></script>
+  	<script type="text/javascript" src="scripts/jquery.ticker.min.js"></script>
+  	<script type="text/javascript">
+  		$(function () {
+  			$('#js-news').ticker();	
+  		});
+  	</script>    
+
+
+	<script type="text/javascript" src="scripts/cufon/cufon.js"></script>
+	<script type="text/javascript" src="scripts/cufon/Delicious_500.font.js"></script>
+	<script type="text/javascript">
+  Cufon.replace('.cufon, .menu, h1, h2, h3, h4, h5', {hover: true});
+	</script>
+
+
+  <!-- jQuery Uniform for form element styling -->
+    <script type="text/javascript" src="scripts/uniform/jquery.uniform.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $(".uniform").uniform();
+      });
+      
+      
+<!--//--><![CDATA[//><!--
+sfHover = function() {
+	var sfEls = document.getElementById("header").getElementsByTagName("li");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//--><!]]>
+      
+    </script>
+    <link rel="stylesheet" href="scripts/uniform/css/uniform.default.css" type="text/css" media="screen" />
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	//Default Action
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li.first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+	
+	//On Click Event
+	$("ul.tabs li, a.tabber").click(function() {
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+		var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+		$(activeTab).fadeIn(500); //Fade in the active content
+		return false;
+	});
+
+});
+</script>
+
+      		
+</head>
+  
+  <body>
+  <div id="header">
+  <div class="container">
+  
+  <div id="language">
+  Select a language ~ <a href="#">English</a> &bull; <a href="#">Hindi</a> &bull; <a href="#">Marathi</a> 
+  </div>
+  
+  <a href="index.html" title="Pune Traffic Police">
+  <span id="logo">&nbsp;</span></a>
+  <h1><a href="index.html" title="Pune Traffic Police">Pune Traffic Portal <span>Tagline for Official portal</span></a></h1>
+
+
+<ul class="top_menu"><li class="pagenav">
+
+
+<ul>
+
+
+<!--liveTraffic dropdown-->
+<li class="dual"><a href="livetraffic.html">Live Traffic</a>
+<ul> 
+
+
+
+	<li><a href="livetraffic.html">Live Traffic page</a>
+	<ul>
+		<li><a href="livetraffic.html#gmaps">Google Map</a></li>
+		<li><a href="livetraffic.html#search">Search</a></li>
+		<li><a href="livetraffic.html#liveCamers">Live Camera Images</a></li>
+		<li><a href="livetraffic.html#avoid">Routes to avoid</a></li>
+	</ul>
+</li>
+
+<li><strong>WHAT IS LIVE TRAFFIC?</strong>
+	<ul>
+    <li>Pune police has setup cameras on major traffic signals and now you can access it. Avoid congested areas and reach your destination quicker...</li> 
+	</ul>
+</li>
+
+</ul>
+</li>
+<!--/liveTraffic dropdown-->
+ 
+<!--/busInfo dropdown-->
+<li class="dual"><a href="businfo.html#busInfo">Bus Info</a>
+<ul>
+	<li><a href="businfo.html#busRoutes">Bus Routes</a>
+	<ul>
+		<li><a href="businfo.html">Bus Fares</a></li>
+		<li><a href="businfo.html">Bus Timings</a></li>
+		<li><a href="businfo.html">News & Announcements</a></li>
+		<li><a href="businfo.html">PMPL Contact Details</a></li>
+		<li><a href="businfo.html">SMS Enquiry</a></li>
+	</ul>
+</li>
+	
+<li><strong>PMPL BUS INFO</strong>
+	<ul>
+    <li>Find out bus routes, fares, timings and other details related to PMPL bus services...</li> 
+	</ul>
+</li>
+
+</ul>
+</li>
+<!--/busInfo dropdown-->
+
+
+
+<!--rickInfo dropdown-->
+<li class="dual"><a href="rickinfo.html#busInfo">Rick Info</a>
+<ul>
+	<li><a href="rickinfo.html#bus">Distance-Fare chart</a>
+	<ul>
+		<li><a href="rickinfo.html">Cab Fares</a></li>
+		<li><a href="rickinfo.html">Rules & Laws</a></li>
+		<li><a href="rickinfo.html">News & Announcements</a></li>
+		<li><a href="rickinfo.html">RTO Contact Details</a></li>
+		<li><a href="rickinfo.html">SMS Enquiry</a></li>
+	</ul>
+</li>
+	
+<li><strong>AUTORICKSHAW & CAB INFO</strong>
+	<ul>
+    <li>Was the fare the auto-driver asked correct? Or did he just overcharge you? Know the correct fares for your cab or rick ride here. </li> 
+	</ul>
+</li>
+
+</ul>
+</li>
+<!--/rickInfo dropdown-->
+
+
+
+<!--challanPay dropdown-->
+<li class="dual"><a href="challanpay.html#payChallan">Pay your Challan</a>
+<ul>
+	<li><a href="challanpay.html">Pay online</a>
+	<ul>
+		<li><a href="challanpay.html">Check Challan Status</a></li>
+		<li><a href="challanpay.html">Pending Challans</a></li>
+		<li><a href="challanpay.html">Violators List</a></li>
+		<li><a href="challanpay.html">Traffic Violations List</a></li>
+		<li><a href="challanpay.html">Violation Rules & Fines</a></li>
+	</ul>
+</li>
+	
+<li><strong>CHALLAN PAYMENT MADE EASY</strong>
+	<ul>
+    <li>Did you get a challan? Paying dues couldnt get easier. Pay them online with just a few clicks. <em>All major Indian Banks and Credit Cards accepted.</em> </li> 
+	</ul>
+</li>
+
+</ul>
+</li>
+<!--/challanPay dropdown-->
+
+
+
+
+<!--challanPay dropdown-->
+<li class="dual"><a href="citizenscorner.html#citizens">Citizens' Corner</a>
+<ul>
+	<li><a href="citizenscorner.html">Homepage</a>
+	<ul>
+		<li><a href="citizenscorner.html">Feedback/Suggestions</a></li>
+		<li><a href="citizenscorner.html">Submit a complaint</a></li>
+		<li><a href="citizenscorner.html">Track Complaints</a></li>
+		<li><a href="citizenscorner.html">Facebook updates</a></li>
+		<li><a href="citizenscorner.html">Blog</a></li>
+	</ul>
+</li>
+	
+<li><strong>HELP US SERVE YOU BETTER</strong>
+	<ul>
+    <li>Citizens Corner is an initiative by Pune Traffic Police to respond quickily to your problems. <em>We have put together a dedicated team just for this.</em> </li> 
+</ul>
+</li>
+
+</ul>
+</li>
+<!--/challanPay dropdown-->
+
+
+
+<li class="single"><a href="contact.html">Contact Us</a>
+
+	<ul>
+    <li>Contact information of all major Traffic branches and officials in an easily searchable format .</li> 
+</ul>
+
+</li>
+
+
+</ul></li></ul>  
+
+  <div class="clear"></div>
+  </div><!--/.container-->
+  </div><!--/#header-->
+  
+
+  <div id="topbar" class="clear">
+  
+  <div id="image">
+  <div class="container">
+  <img class="clear" src="images/sample/2_2.png" alt='' />
+  
+  <!--
+  <iframe width="980" height="220" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=J+M+Road,+Deccan+Gymkhana,+Pune,+Maharashtra,+India&amp;sll=18.517604,73.841606&amp;sspn=0.020428,0.042272&amp;ie=UTF8&amp;hq=&amp;hnear=aa Jangali+Maharaj+Rd,+Deccan+Gymkhana,+Pune,+Maharashtra,+India&amp;ll=18.518191,73.8416&amp;spn=0.020428,0.042272&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+  -->
+  
+  </div><!--/.container-->
+  </div><!--/#image-->
+
+  <div id="news">
+  <div class="container">
+ 	<div id="ticker-wrapper" class="no-js">
+	<ul id="js-news" class="js-hidden">
+			<li class="news-item"><a href="news.html">We're on Facebook. Join our group and we'll act on your complaints promptly</a></li>
+			<li class="news-item"><a href="news.html">More details of the Pune Traffic portal website design contest published. Click here to know more.</a></li>
+			<li class="news-item"><a href="news.html">Further updates Pune Traffic Portal is coming soon!</a></li>
+	</ul>
+	</div>
+  </div><!--/.container-->
+  </div><!--/#news-->
+
+  </div><!--/#topbar-->
+  
+
+  <div id="content" class="clear">
+  <div class="container">
+  
+    
+<div id="page_left">
+    
+    <h4> Welcome to Citizens' Corner </h4>
+
+    
+      <p>
+      Here, you can find more information about rick/cab fares etc.. Cras vehicula magna id lacus fermentum ac tempor diam sagittis. Nullam ipsum neque, sagittis vel euismod non, egestas aliquet libero. Etiam nec orci lectus. In vel metus erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus egestas eleifend. </p>
+
+
+    <div class="homecolumn">
+
+    <h4>Latest News & Alerts</h4>
+    <ul class="blocky">
+      <li><a href="news.html#newsItem-X">Hot news topic here with a long sentence as title or longer than this can come here.</a></li>
+
+      <li><a href="news.html#newsItem-X">Some other thing is here which is cool too</a></li>
+      <li><a href="news.html#newsItem-X">Hot news topic Two here. They say it's good.</a></li>
+      <li><a href="news.html#newsItem-X">Breaking news topic may be here. They break.</a></li>
+      <li><a href="news.html#newsItem-X">Some other Alert or News related to PTP</a></li>
+    </ul>
+    
+    </div>
+    
+    <div class="homecolumn">
+
+    <h4>Quick Contacts</h4>
+
+<table class="resultsTable" border="0" width="100%" cellpadding="1" cellspacing="1">
+	<tr>
+		<td>Deccan Area</td>
+		<td>9823680990</td>
+	</tr>
+	<tr class="alt">
+
+		<td>Shivajinagar</td>
+		<td>9823433939</td>
+	</tr>
+	<tr>
+		<td>Hadapsar</td>
+		<td>9238279939</td>
+	</tr>
+
+	<tr class="alt">
+		<td>Khadki Area</td>
+		<td>9238932923</td>
+	</tr>
+	<tr>
+		<td>Chinchwad</td>
+		<td>9823033939</td>
+
+	</tr>
+  <tr class="alt">
+		<td>Sus Road</td>
+		<td>9282339319</td>
+	</tr>
+</table>
+
+    </div>
+
+  
+</div> <!--/#page_left-->    
+    
+
+<div id="page_right">
+
+  <h4>Quick Links</h4>
+  <ul>
+    <li><a href="#">Suggestions/Feedback</a></li>
+    <li><a href="#">Submit Complaint</a></li>
+    <li><a href="#">Track your complaint</a></li>
+    <li><a href="#">Our Blog</a></li>
+    <li><a href="#">Facebook Updates</a></li>
+  </ul>
+  
+</div>
+
+
+<div class="clear"></div>
+
+  
+  <div class="clear"></div>
+  </div><!--/.container-->
+  </div><!--/#content-->
+  
+  
+  <div id="footer">
+  <div class="container">
+            
+            
+            <div class="footerbox first">
+            <h4>Quick Links</h4>
+              <ul>
+              <li><a href="challanpay.html">Pay your Challan Online</a></li>
+              <li><a href="#">News & Alerts </a></li>
+              <li><a href="#">Pune Bus Guide </a></li>
+              <li><a href="contact.html">Important <strong>Contact Numbers</strong></a></li>
+              <li><a href="#">Feedback</a></li>
+              </ul>
+            </div>
+
+            <div class="footerbox">
+            <h4>Live Traffic</h4>
+              <ul>
+              <li><a href="livetraffic.html">Camera Images from Traffic signals</a></li>
+              <li><a href="livetraffic.html">Congestion Map</a></li>
+              <li><a href="livetraffic.html">Routes to Avoid</a></li>
+              <li><a href="livetraffic.html">Accident Reporting System </a></li>
+              <li><a href="livetraffic.html">Download PTIS Mobile app </a></li>
+              </ul>
+            </div>
+            
+
+            <div class="footerbox">
+            <h4>Information</h4>
+              
+              <h5>Bus</h5>
+              <ul class="sub">
+              <li><a href="businfo.html">Bus Fare Chart</a></li>
+              <li><a href="businfo.html">News and Announcements </a></li>
+              <li><a href="businfo.html">PMPL Contact Details </a></li>
+              </ul>
+
+              <h5>Rick/Cabs</h5>
+              <ul class="sub">
+              <li><a href="rickinfo.html">Rick/Cab Distance-fare Chart</a></li>
+              <li><a href="rickinfo.html">News and Announcements </a></li>
+              <li><a href="rickinfo.html">RTO Contact Details</a></li>
+              </ul>
+              
+            </div>
+
+            <div class="footerbox last">
+            <h4>Citizens' Corner</h4>
+              <ul>
+              <li><a href="citizenscorner.html">Blog</a></li>
+              <li><a href="citizenscorner.html">Submit a complaint</a></li>
+              <li><a href="citizenscorner.html">Help us improve</a></li>
+              <li><a href="citizenscorner.html#fb">Facebook Group</a></li>
+              </ul>
+             
+             <h5>Catch us online</h5> 
+              <div class="socially">
+                    <a href="#" rel="external nofollow" title="Facebook Group"><span class="social facebook"></span></a>
+                    <a href="http://www.facebook.com/pages/Pune-Traffic-Police/148036915234615" rel="external nofollow" title="Follow us on Twitter"><span class="social twitter"></span></a>
+              </div>              
+            </div>
+  
+  <div class="clear"></div>
+  </div><!--/.container-->
+  </div><!--/#footer-->
+  
+  <div id="credits" class="clear">
+  <div class="container">
+  
+  
+  <div id="info">
+  &copy; 2010 Pune Traffic Police <br />
+  All rights reserved &bull; Website maintained by Janwani, Pune. <br />
+  Contact Pune Traffic police Helpline <strong>1800 029 289292</strong> 
+  </div>
+  
+  <div id="sponsors">
+  Sponsors
+  <a class="sponsor tejraj linkFade" title="Tejraj" href="http://www.tejraj.in/" rel="external">Tejraj</a>
+  <a class="sponsor pinnacle linkFade" title="Pinnacle" href="http://www.pinnaclegroup.in/" rel="external">Pinnacle</a>
+  Initiative by 
+  <a class="sponsor janwani linkFade" title="Janwani" href="http://www.janwani.org/" rel="external">Janwani</a>
+  </div>
+  
+  
+  </div><!--/.container-->
+  <div class="clear"></div>
+  </div><!--/#credits-->
+  
+  
+  
+ 
+ 	</body>
+
+
+
+</html>
